@@ -1,0 +1,31 @@
+# JetBrains / Android Studio
+*.iml
+.idea/
+.gradle/
+build/
+**/build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Kotlin Multiplatform Specific
+.kotlin/
+composeApp/build/
+iosApp/DerivedData/
+iosApp/.generated/
+
+# Apple / iOS (zachowujemy strukturę projektu, ignorujemy dane użytkownika)
+*.xcuserstate
+*.xcuserdatad
+/iosApp/Pods/
+/iosApp/.bundle/
+.DS_Store
+
+# Rozszerzenia plików binarnych i logów
+*.hprof
+*.pyc
+*.log
+
+# Cursor / AI
+.cursor/
