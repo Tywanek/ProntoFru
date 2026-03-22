@@ -15,7 +15,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.radlab.prontofru.Greeting
+import com.radlab.prontofru.di.appModule
 import org.jetbrains.compose.resources.painterResource
+import org.koin.compose.KoinApplication
+import org.koin.dsl.koinConfiguration
 
 import prontofru.composeapp.generated.resources.Res
 import prontofru.composeapp.generated.resources.compose_multiplatform
@@ -23,6 +26,17 @@ import prontofru.composeapp.generated.resources.compose_multiplatform
 @Composable
 @Preview
 fun App() {
+    KoinApplication(
+        configuration = koinConfiguration {
+            modules(appModule)
+        },
+    ) {
+        AppContent()
+    }
+}
+
+@Composable
+private fun AppContent() {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
