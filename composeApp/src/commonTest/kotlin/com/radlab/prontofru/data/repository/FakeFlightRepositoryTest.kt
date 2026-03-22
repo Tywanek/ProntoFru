@@ -1,6 +1,7 @@
 package com.radlab.prontofru.data.repository
 
 import com.radlab.prontofru.domain.model.Flight
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.test.advanceTimeBy
 import kotlinx.coroutines.test.runTest
@@ -9,6 +10,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
+@OptIn(ExperimentalCoroutinesApi::class)
 class FakeFlightRepositoryTest {
 
     @Test
