@@ -179,7 +179,7 @@ fun FlightCard(flight: Flight) {
 
             Column(horizontalAlignment = Alignment.End) {
                 Text(
-                    text = "${flight.price} PLN",
+                    text = flight.price.format(),
                     style = MaterialTheme.typography.titleLarge,
                     color = Color(0xFF1976D2),
                     fontWeight = FontWeight.ExtraBold

@@ -1,6 +1,7 @@
 package com.radlab.prontofru.ui.viewmodel
 
 import com.radlab.prontofru.domain.model.Flight
+import com.radlab.prontofru.domain.model.Money
 import com.radlab.prontofru.domain.repository.FlightRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -93,7 +94,7 @@ class FlightViewModelTest {
 
 private fun sampleFlight(origin: String) = Flight(
     id = "test-1",
-    price = 100.0,
+    price = Money(10000, "PLN"),
     origin = origin,
     destination = "XXX",
     departureDate = LocalDateTime(2025, 1, 1, 12, 0),

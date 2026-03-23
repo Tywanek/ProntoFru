@@ -69,5 +69,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtimeCompose)
 
     testImplementation(libs.kotlin.test)
+    testImplementation(libs.koin.test)
     testImplementation(libs.junit)
 }
