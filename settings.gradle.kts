@@ -1,6 +1,7 @@
 rootProject.name = "ProntoFru"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
+@Suppress("UnstableApiUsage")
 pluginManagement {
     repositories {
         google {
@@ -14,7 +15,11 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
 
+@Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositories {
         google {
@@ -29,3 +34,4 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
+include(":shared")
